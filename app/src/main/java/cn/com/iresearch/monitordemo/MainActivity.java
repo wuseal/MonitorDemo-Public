@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import cn.com.iresearch.phonemonitor.library.MonitorService;
+import cn.com.iresearch.phonemonitor.library.openapi.OpenApiManager;
 
 public class MainActivity extends Activity {
     private int REQUEST_CODE = 0x10010;
@@ -74,13 +75,19 @@ public class MainActivity extends Activity {
     }
 
     private void directStartService() {
+        OpenApiManager openApiManager = new OpenApiManager(this);
+        openApiManager.getConfigSetter().setChannelId("testChannel");
+        openApiManager.getLocationInfoSetter().setMcc("460");
+        openApiManager.getLocationInfoSetter().setMnc("001");
+        openApiManager.getLocationInfoSetter().setGpsLng(12.32);
+        openApiManager.getLocationInfoSetter().setGpsLat(12.33d);
         Intent intent = new Intent(MainActivity.this, MonitorService.class);
         startService(intent);
         button.setText("服务已经启动");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "您已经启动服务了!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "您已经启动服务了", Toast.LENGTH_SHORT).show();
             }
         });
     }

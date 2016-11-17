@@ -16,11 +16,11 @@
 #   public *;
 #}
 -keep class cn.com.iresearch.library.**{*;}
--keep class com.jaredrummler.android.processes.**{*;}
--keep class com.hmt.analytics.**{*;}
--keep class org.apaches.commons.codec.**{*;}
--keep class org.jetbrains.annotations.**{*;}
--keep class kotlin.**{*;}
- -dontwarn android.**
- -dontwarn com.android.internal.**
- -dontwarn com.squareup.**
+#-keep class com.jaredrummler.android.processes.**{*;}
+#-keep class com.hmt.analytics.**{*;}
+#-keep class org.apaches.commons.codec.**{*;}
+#-keep class org.jetbrains.annotations.**{*;}
+#-keep class kotlin.**{*;}
+-dontwarn android.**
+-dontwarn com.android.internal.**
+# -dontwarn com.squareup.**

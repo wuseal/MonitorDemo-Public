@@ -10,9 +10,9 @@
   allprojects {
     repositories {
         jcenter()
-        maven { url "http://113.200.98.92:8081/nexus/content/groups/public/" }
+        maven { url "http://dpapi.irs01.com:8081/nexus/content/groups/public/" }
       }
   }
 
-  compile 'cn.com.iresearch.sdk:senoirmonitor:2.0.3'
+  compile 'cn.com.iresearch.sdk:seniormonitor:2.0.3.1'
 ````

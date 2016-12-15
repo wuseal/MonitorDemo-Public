@@ -7,3 +7,4 @@
 .externalNativeBuild
 /gradle.properties
 /.idea/
+/test.jks

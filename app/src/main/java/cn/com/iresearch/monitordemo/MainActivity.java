@@ -54,17 +54,6 @@ public class MainActivity extends Activity {
             //申请READ_PHONE_STATE权限
             requests.add(Manifest.permission.READ_PHONE_STATE);
         }
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请ACCESS_COARSE_LOCATION权限
-            requests.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请ACCESS_FINE_LOCATION权限
-            requests.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-
         if (requests.size() == 0) {
             directStartService();
         } else {

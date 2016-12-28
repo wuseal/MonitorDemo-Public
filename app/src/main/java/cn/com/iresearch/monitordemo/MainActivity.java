@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
     }
 
     private void doNext(int requestCode, int[] grantResults) {
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == REQUEST_CODE && grantResults.length != 0) {
             for (int grantResult : grantResults) {
                 if (grantResult != PackageManager.PERMISSION_GRANTED) {
                     requestOurPermissions();

@@ -14,5 +14,6 @@
       }
   }
 
-  compile 'cn.com.iresearch.sdk:seniormonitor:2.0.3.5'
-````
+  compile 'cn.com.iresearch.sdk:seniormonitor:2.0.3.6'
+​````
+```

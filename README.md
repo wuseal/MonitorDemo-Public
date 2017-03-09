@@ -2,7 +2,7 @@
 艾瑞高级环境监测sdk使用示例demo
 
 
-###最后sdk版本号为2.0.3.5
+###最后sdk版本号为2.0.3.6
 
 ###使用方式
 ```java
@@ -14,5 +14,6 @@
       }
   }
 
-  compile 'cn.com.iresearch.sdk:seniormonitor:2.0.3.5'
-````
+  compile 'cn.com.iresearch.sdk:seniormonitor:2.0.3.6'
+​````
+```

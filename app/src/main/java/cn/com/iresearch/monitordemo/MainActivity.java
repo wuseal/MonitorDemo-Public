@@ -2,7 +2,6 @@ package cn.com.iresearch.monitordemo;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import cn.com.iresearch.phonemonitor.library.MonitorService;
+import cn.com.iresearch.phonemonitor.library.IRSeniorMonitor;
 
 public class MainActivity extends Activity {
     private int REQUEST_CODE = 0x10010;
@@ -63,8 +62,7 @@ public class MainActivity extends Activity {
     }
 
     private void directStartService() {
-        Intent intent = new Intent(MainActivity.this, MonitorService.class);
-        startService(intent);
+        IRSeniorMonitor.start(getApplicationContext());
         button.setText("服务已经启动");
         button.setOnClickListener(new View.OnClickListener() {
             @Override

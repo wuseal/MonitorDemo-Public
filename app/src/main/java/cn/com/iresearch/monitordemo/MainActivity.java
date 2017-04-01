@@ -2,7 +2,6 @@ package cn.com.iresearch.monitordemo;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import cn.com.iresearch.phonemonitor.library.MonitorService;
+import cn.com.iresearch.phonemonitor.library.IRSeniorMonitor;
 import cn.com.iresearch.phonemonitor.library.openapi.OpenApiManager;
 
 public class MainActivity extends Activity {
@@ -70,8 +69,7 @@ public class MainActivity extends Activity {
         openApiManager.getLocationInfoSetter().setMnc("001");
         openApiManager.getLocationInfoSetter().setGpsLng(12.32);
         openApiManager.getLocationInfoSetter().setGpsLat(12.33d);
-        Intent intent = new Intent(MainActivity.this, MonitorService.class);
-        startService(intent);
+        IRSeniorMonitor.start(getApplicationContext());
         button.setText("服务已经启动");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
